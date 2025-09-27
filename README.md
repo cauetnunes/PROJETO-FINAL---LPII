@@ -55,31 +55,5 @@ chmod +x scripts/build_linux.sh
 
 ---
 
-## 🧪 Testes rápidos
-- **Contar linhas (Windows/CMD):**
-  ```bat
-  find /v /c "" logs.txt
-  ```
-- **Últimas linhas (PowerShell):**
-  ```bat
-  powershell -NoProfile -Command "Get-Content -LiteralPath '%CD%\logs.txt' -Tail 10"
-  ```
-- **Sem linhas vazias:**
-  ```bat
-  findstr /r "^\s*$" logs.txt && echo "tem linha vazia" || echo "ok, sem linha vazia"
-  ```
-
-- **Stress test:** edite `app/log_demo.cpp` e ajuste:
-  ```cpp
-  const int N_THREADS = 32;
-  const int MSG_PER_THREAD = 10000;
-  ```
-  Recompile e rode:
-  ```bat
-  script/build_windows.bat
-  build\Release\log_demo.exe stress.txt
-  ```
-
-
 
 
