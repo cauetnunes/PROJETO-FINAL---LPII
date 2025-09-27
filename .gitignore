@@ -1,0 +1,57 @@
+# --- CMake
+/build/
+/cmake-build-*/
+/CMakeFiles/
+/CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+Makefile
+CTestTestfile.cmake
+Testing/
+compile_commands.json
+
+# --- Visual Studio / MSBuild
+/.vs/
+/x64/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.vcxproj.*.tmp
+*.ope n sdf
+*.sdf
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
+*.lastbuildstate
+*.tlog/
+ipch/
+*.pdb
+*.obj
+*.idb
+*.ilk
+
+# --- Ninja
+.ninja_deps
+.ninja_log
+
+# --- Binários (gerados)
+*.exe
+*.dll
+*.lib
+*.a
+*.so
+*.dylib
+*.o
+
+# --- Logs e temporários
+logs.txt
+*.log
+*.tmp
+*.swp
+Thumbs.db
+.DS_Store
+
+# --- VS Code (ignore tudo; remova se quiser versionar configs)
+.vscode/
