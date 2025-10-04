@@ -33,6 +33,20 @@ add_executable(log_demo app/log_demo.cpp)
 
 target_link_libraries(log_demo PRIVATE tslog)
 
+add_executable(tcp_server app/tcp_server.cpp)
+target_link_libraries(tcp_server PRIVATE tslog)
+target_include_directories(tcp_server PRIVATE src)  # precisa por causa do net.hpp
+
+add_executable(tcp_client app/tcp_client.cpp)
+target_link_libraries(tcp_client PRIVATE tslog)
+target_include_directories(tcp_client PRIVATE src)  # precisa por causa do net.hpp
+
+# Winsock no Windows
+if (WIN32)
+  target_link_libraries(tcp_server PRIVATE ws2_32)
+  target_link_libraries(tcp_client PRIVATE ws2_32)
+endif()
+
 
 # No Windows, garantir modo UTF-8 (opcional, MSVC)
 if (MSVC)
