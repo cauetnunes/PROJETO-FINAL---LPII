@@ -22,7 +22,7 @@ std::string message;
 
 class Logger {
 public:
-// Singleton simples para facilitar uso na etapa 1
+
 static Logger& instance();
 
 
